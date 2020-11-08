@@ -117,23 +117,47 @@ header .right .avatar {
   height: 3.2rem;
 }
 
+header .menu-responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  header .middle,
+  .right a,
+  .right img {
+    display: none;
+  }
+  header .menu-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .menu-responsive img {
+    cursor: pointer;
+  }
+}
+
 @-webkit-keyframes colorCycle {
-  0%, 55% {
+  0%,
+  55% {
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1);
   }
-  11%, 33% {
+  11%,
+  33% {
     -webkit-filter: none;
             filter: none;
   }
 }
 
 @keyframes colorCycle {
-  0%, 55% {
+  0%,
+  55% {
     -webkit-filter: brightness(0) invert(1);
             filter: brightness(0) invert(1);
   }
-  11%, 33% {
+  11%,
+  33% {
     -webkit-filter: none;
             filter: none;
   }
@@ -185,8 +209,8 @@ main h1 span {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: colorCycle 10s  ease-in-out infinite;
-          animation: colorCycle 10s  ease-in-out infinite;
+  -webkit-animation: colorCycle 10s ease-in-out infinite;
+          animation: colorCycle 10s ease-in-out infinite;
 }
 
 main h1 span:nth-child(1) {
@@ -228,8 +252,8 @@ main .buttons > button {
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
-  -webkit-transition: .2s ease-in;
-  transition: .2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 main .buttons > button.outlined {
@@ -250,6 +274,24 @@ main p {
   font-weight: 400;
   letter-spacing: -0.04rem;
   text-align: center;
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    width: 100%;
+    padding: 5.6rem 2.4rem;
+  }
+  main h1 span {
+    font-size: 8.8rem;
+    line-height: 8.8rem;
+    letter-spacing: -0.9rem;
+  }
+  main p {
+    font-size: 1.8rem;
+  }
+  main .buttons button {
+    font-size: 1.5rem;
+  }
 }
 
 footer {
